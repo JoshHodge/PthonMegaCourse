@@ -13,6 +13,8 @@ def Def_word(word):
         return data[word.lower()]
     elif word in dkeys:
         return data[word]
+    elif word.upper() in dkeys:
+        return data[word.upper()]
     elif word.capitalize() in dkeys:
         return data[word.capitalize()]
     elif get_close_matches(word, dkeys, cutoff=0.6)[0] != "":
