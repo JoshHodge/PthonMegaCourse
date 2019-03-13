@@ -12,8 +12,9 @@ def Def_word(word):
     if word in dkeys:
         return data[word.lower()]
     elif get_close_matches(word, dkeys)[0] != "":
-        return ("Did you mean: " + get_close_matches(word, dkeys)[0] + '?')
+        NewWord = get_close_matches(word, dkeys)[0]
+        return ("Did you mean: " + NewWord + "? \n" + "The definition for " + NewWord + " is: " + str(data[NewWord.lower()]).strip('[]'))
     else: return "Word does not exist"
-    
+
 WordToDef = (input("Please enter a word to search for: \n"))
 print(Def_word(WordToDef))
