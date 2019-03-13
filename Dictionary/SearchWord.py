@@ -9,8 +9,12 @@ data = json.load(open("076 data.json"))
 dkeys = data.keys() #get data keys from dictionary
 
 def Def_word(word):
-    if word in dkeys:
+    if word.lower() in dkeys:
         return data[word.lower()]
+    elif word in dkeys:
+        return data[word]
+    elif word.capitalize() in dkeys:
+        return data[word.capitalize()]
     elif get_close_matches(word, dkeys, cutoff=0.6)[0] != "":
         NewWord = get_close_matches(word, dkeys)[0]
         return ("Did you mean: " + NewWord + "? \n" + "The definition for " + NewWord + " is: " + str(data[NewWord.lower()]).strip('[]'))
