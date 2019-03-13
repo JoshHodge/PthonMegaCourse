@@ -19,6 +19,7 @@ def Def_word(word):
 WordToDef = (input("Please enter a word to search for: \n"))
 output = Def_word(WordToDef)
 
+#Issues with the list being displayed as a single character resolved by using below loop
 if type(output) == list:
     for item in output:
         print(item)
