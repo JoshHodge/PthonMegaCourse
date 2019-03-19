@@ -17,7 +17,7 @@
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_570627ef5c95419eb0206441659746a5 {
+    <style>#map_3ee60f26fba54f0f87c3f0a548e5eff8 {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -28,7 +28,7 @@
 </head>
 <body>    
     
-    <div class="folium-map" id="map_570627ef5c95419eb0206441659746a5" ></div>
+    <div class="folium-map" id="map_3ee60f26fba54f0f87c3f0a548e5eff8" ></div>
 </body>
 <script>    
     
@@ -36,10 +36,10 @@
         var bounds = null;
     
 
-    var map_570627ef5c95419eb0206441659746a5 = L.map(
-        'map_570627ef5c95419eb0206441659746a5', {
-        center: [-30.5, 22.9],
-        zoom: 6,
+    var map_3ee60f26fba54f0f87c3f0a548e5eff8 = L.map(
+        'map_3ee60f26fba54f0f87c3f0a548e5eff8', {
+        center: [-25.5, 22.9],
+        zoom: 5.5,
         maxBounds: bounds,
         layers: [],
         worldCopyJump: false,
@@ -49,8 +49,8 @@
 
 
     
-    var tile_layer_61bae5734f4c4a9881d6366335970565 = L.tileLayer(
-        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    var tile_layer_e4e900a7c7a944f2aa05849cea805508 = L.tileLayer(
+        'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
         {
         "attribution": null,
         "detectRetina": false,
@@ -61,1435 +61,1589 @@
         "opacity": 1,
         "subdomains": "abc",
         "tms": false
-}).addTo(map_570627ef5c95419eb0206441659746a5);
+}).addTo(map_3ee60f26fba54f0f87c3f0a548e5eff8);
+    var tile_layer_3a69e45ec2b947269673693233df85ed = L.tileLayer(
+        'http://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+        {
+        "attribution": "<a href='https://www.openstreetmap.org/copyright'>\u00a9 OpenStreetMap contributors</a>, '<a href='http://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA 2.0</a> <a href='http://www.openrailwaymap.org/'>OpenRailwayMap</a> and OpenStreetMap",
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_3ee60f26fba54f0f87c3f0a548e5eff8);
     
-            var feature_group_738c4829df814b79a83a57046e91929b = L.featureGroup(
-                ).addTo(map_570627ef5c95419eb0206441659746a5);
+            var layer_control_46c1051ca86146dcb44c57e1e1987e58 = {
+                base_layers : { "cartodbdark_matter" : tile_layer_e4e900a7c7a944f2aa05849cea805508,"http://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png" : tile_layer_3a69e45ec2b947269673693233df85ed, },
+                overlays : { "My Map" : feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce, }
+                };
+            L.control.layers(
+                layer_control_46c1051ca86146dcb44c57e1e1987e58.base_layers,
+                layer_control_46c1051ca86146dcb44c57e1e1987e58.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_3ee60f26fba54f0f87c3f0a548e5eff8);
+            
+                tile_layer_3a69e45ec2b947269673693233df85ed.remove();
         
     
-        var marker_fa8fc71e2cd04bd18d69e48ba6b4490c = L.marker(
-            [-33.96625, 25.638833333333334],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
+            var feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce = L.featureGroup(
+                ).addTo(map_3ee60f26fba54f0f87c3f0a548e5eff8);
         
     
-
-                var icon_4ce8af0520df4900baacb97201e382f8 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_fa8fc71e2cd04bd18d69e48ba6b4490c.setIcon(icon_4ce8af0520df4900baacb97201e382f8);
+            var circle_marker_fcd15e26ffcc491aa2dd62978e0e431d = L.circleMarker(
+                [-33.96625, 25.638833333333334],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_ee6c28b56ba14591876c05fbd3fc23bb = L.popup({maxWidth: '100%'
+            var popup_f58d282139fd4266992e87c6b1474925 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_0b286875c2254a8296c3a62df6684bcf = $(`<div id="html_0b286875c2254a8296c3a62df6684bcf" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_ee6c28b56ba14591876c05fbd3fc23bb.setContent(html_0b286875c2254a8296c3a62df6684bcf);
+                var html_b8f0d9035d454934a3399424b9652698 = $(`<div id="html_b8f0d9035d454934a3399424b9652698" style="width: 100.0%; height: 100.0%;">PE Manganese</div>`)[0];
+                popup_f58d282139fd4266992e87c6b1474925.setContent(html_b8f0d9035d454934a3399424b9652698);
             
 
-            marker_fa8fc71e2cd04bd18d69e48ba6b4490c.bindPopup(popup_ee6c28b56ba14591876c05fbd3fc23bb)
+            circle_marker_fcd15e26ffcc491aa2dd62978e0e431d.bindPopup(popup_f58d282139fd4266992e87c6b1474925)
             ;
 
             
         
     
-        var marker_796279f842374741a0437a89b51d4543 = L.marker(
-            [8.985277777777778, -11.710472222222222],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_427acf05aa634c4ebea4929ea837cb58 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_796279f842374741a0437a89b51d4543.setIcon(icon_427acf05aa634c4ebea4929ea837cb58);
+            var circle_marker_f946684724db46afa75537b44e91a366 = L.circleMarker(
+                [8.985277777777778, -11.710472222222222],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_2ac90f8bb1254564ac86fab7944b8b90 = L.popup({maxWidth: '100%'
+            var popup_5effd72602d241e4b770f22144ccc189 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_cc8e629e40a14577a38304f4dc817d40 = $(`<div id="html_cc8e629e40a14577a38304f4dc817d40" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_2ac90f8bb1254564ac86fab7944b8b90.setContent(html_cc8e629e40a14577a38304f4dc817d40);
+                var html_f2e55c7cc1dc4413a43fbbcbb28292b6 = $(`<div id="html_f2e55c7cc1dc4413a43fbbcbb28292b6" style="width: 100.0%; height: 100.0%;">African Minerals Ltd</div>`)[0];
+                popup_5effd72602d241e4b770f22144ccc189.setContent(html_f2e55c7cc1dc4413a43fbbcbb28292b6);
             
 
-            marker_796279f842374741a0437a89b51d4543.bindPopup(popup_2ac90f8bb1254564ac86fab7944b8b90)
+            circle_marker_f946684724db46afa75537b44e91a366.bindPopup(popup_5effd72602d241e4b770f22144ccc189)
             ;
 
             
         
     
-        var marker_30ec8519d34a4701b4d4459b424a4aac = L.marker(
-            [-27.841416666666667, 23.051666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_da67a830efa944a483846f95c4005659 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_30ec8519d34a4701b4d4459b424a4aac.setIcon(icon_da67a830efa944a483846f95c4005659);
+            var circle_marker_66ccdd47fe7142ae9742af00081d7e61 = L.circleMarker(
+                [-27.841416666666667, 23.051666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_9ca4748ff89744c9a1bc6d558a69f7ec = L.popup({maxWidth: '100%'
+            var popup_f7cb79e092314134a5fdfcd797e600b3 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_61e5191a830648b9af5b8a0c47f4319a = $(`<div id="html_61e5191a830648b9af5b8a0c47f4319a" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_9ca4748ff89744c9a1bc6d558a69f7ec.setContent(html_61e5191a830648b9af5b8a0c47f4319a);
+                var html_f1599f7d2a194af08eed985a3824f23e = $(`<div id="html_f1599f7d2a194af08eed985a3824f23e" style="width: 100.0%; height: 100.0%;">Afrimat</div>`)[0];
+                popup_f7cb79e092314134a5fdfcd797e600b3.setContent(html_f1599f7d2a194af08eed985a3824f23e);
             
 
-            marker_30ec8519d34a4701b4d4459b424a4aac.bindPopup(popup_9ca4748ff89744c9a1bc6d558a69f7ec)
+            circle_marker_66ccdd47fe7142ae9742af00081d7e61.bindPopup(popup_f7cb79e092314134a5fdfcd797e600b3)
             ;
 
             
         
     
-        var marker_1f2e63072030444fa06003364e547b5b = L.marker(
-            [-8.801555555555556, 13.256055555555555],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_2b3172965aff453dabe37e92d2a0eeef = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_1f2e63072030444fa06003364e547b5b.setIcon(icon_2b3172965aff453dabe37e92d2a0eeef);
+            var circle_marker_ebaedd4a13da4feabfc149e28e67a7fd = L.circleMarker(
+                [-8.801555555555556, 13.256055555555555],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_f35d05b111764d05b1877ae4cb1891b5 = L.popup({maxWidth: '100%'
+            var popup_be894f5b4b8e4850ae97f31bfef2d908 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_7ade2f40df3d47c288bd9604e133bed7 = $(`<div id="html_7ade2f40df3d47c288bd9604e133bed7" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_f35d05b111764d05b1877ae4cb1891b5.setContent(html_7ade2f40df3d47c288bd9604e133bed7);
+                var html_dee1932d8aba43a8a8cb210f86c93d4e = $(`<div id="html_dee1932d8aba43a8a8cb210f86c93d4e" style="width: 100.0%; height: 100.0%;">Angola environmental services</div>`)[0];
+                popup_be894f5b4b8e4850ae97f31bfef2d908.setContent(html_dee1932d8aba43a8a8cb210f86c93d4e);
             
 
-            marker_1f2e63072030444fa06003364e547b5b.bindPopup(popup_f35d05b111764d05b1877ae4cb1891b5)
+            circle_marker_ebaedd4a13da4feabfc149e28e67a7fd.bindPopup(popup_be894f5b4b8e4850ae97f31bfef2d908)
             ;
 
             
         
     
-        var marker_bc2b191789844f59b1888c9a86e06b9f = L.marker(
-            [-27.712333333333333, 30.03136111111111],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_bf85ea14eda6414e8949bb00d1cb7641 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_bc2b191789844f59b1888c9a86e06b9f.setIcon(icon_bf85ea14eda6414e8949bb00d1cb7641);
+            var circle_marker_da1f78cee9554399a12b473e27afda29 = L.circleMarker(
+                [-27.712333333333333, 30.03136111111111],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_5df933e730c044a6a00ee5bb0856ae72 = L.popup({maxWidth: '100%'
+            var popup_f83df3fc9ebe42e69643d1fe9bdcfe77 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_607c2956473040b08015de7bbbef8a37 = $(`<div id="html_607c2956473040b08015de7bbbef8a37" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_5df933e730c044a6a00ee5bb0856ae72.setContent(html_607c2956473040b08015de7bbbef8a37);
+                var html_c331ec206a8c4446b9d60d081c3b086b = $(`<div id="html_c331ec206a8c4446b9d60d081c3b086b" style="width: 100.0%; height: 100.0%;">ArcelorMittal</div>`)[0];
+                popup_f83df3fc9ebe42e69643d1fe9bdcfe77.setContent(html_c331ec206a8c4446b9d60d081c3b086b);
             
 
-            marker_bc2b191789844f59b1888c9a86e06b9f.bindPopup(popup_5df933e730c044a6a00ee5bb0856ae72)
+            circle_marker_da1f78cee9554399a12b473e27afda29.bindPopup(popup_f83df3fc9ebe42e69643d1fe9bdcfe77)
             ;
 
             
         
     
-        var marker_c872e234530a41cca874dd8ceb5b5781 = L.marker(
-            [-26.66363888888889, 27.817333333333334],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_ec5ab917412d47d097ac2eeaf44ac0e2 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_c872e234530a41cca874dd8ceb5b5781.setIcon(icon_ec5ab917412d47d097ac2eeaf44ac0e2);
+            var circle_marker_024f11e15ae640afb35db291d639eb26 = L.circleMarker(
+                [-26.66363888888889, 27.817333333333334],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_b68d58d3684f400f8ff647c908d15f29 = L.popup({maxWidth: '100%'
+            var popup_8992223bf7614173be9bc0ec0b42caba = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_1761d0c7e2cd4066949d1f1adf823068 = $(`<div id="html_1761d0c7e2cd4066949d1f1adf823068" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_b68d58d3684f400f8ff647c908d15f29.setContent(html_1761d0c7e2cd4066949d1f1adf823068);
+                var html_076d2e939c07487c8b3aae1ee2c154f8 = $(`<div id="html_076d2e939c07487c8b3aae1ee2c154f8" style="width: 100.0%; height: 100.0%;">ArcelorMittal</div>`)[0];
+                popup_8992223bf7614173be9bc0ec0b42caba.setContent(html_076d2e939c07487c8b3aae1ee2c154f8);
             
 
-            marker_c872e234530a41cca874dd8ceb5b5781.bindPopup(popup_b68d58d3684f400f8ff647c908d15f29)
+            circle_marker_024f11e15ae640afb35db291d639eb26.bindPopup(popup_8992223bf7614173be9bc0ec0b42caba)
             ;
 
             
         
     
-        var marker_e624209f4db0415a90d6d3b8415450ec = L.marker(
-            [5.858388888888889, -10.048972222222222],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_3423b838ae8a4681ba6bacb14f00e8ff = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_e624209f4db0415a90d6d3b8415450ec.setIcon(icon_3423b838ae8a4681ba6bacb14f00e8ff);
+            var circle_marker_01b0403ee17e460eb0b46a7d1a94c91f = L.circleMarker(
+                [5.858388888888889, -10.048972222222222],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_eaac529598ea4ff5b439a4f40cea2256 = L.popup({maxWidth: '100%'
+            var popup_0fbc23ab0bd7480ebc630ae260fb7d49 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_dccf4b4298134726b7cca62b0ecf1e5b = $(`<div id="html_dccf4b4298134726b7cca62b0ecf1e5b" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_eaac529598ea4ff5b439a4f40cea2256.setContent(html_dccf4b4298134726b7cca62b0ecf1e5b);
+                var html_1038996f89db458e918dcd98bc2a7aca = $(`<div id="html_1038996f89db458e918dcd98bc2a7aca" style="width: 100.0%; height: 100.0%;">ArcelorMittal Liberia</div>`)[0];
+                popup_0fbc23ab0bd7480ebc630ae260fb7d49.setContent(html_1038996f89db458e918dcd98bc2a7aca);
             
 
-            marker_e624209f4db0415a90d6d3b8415450ec.bindPopup(popup_eaac529598ea4ff5b439a4f40cea2256)
+            circle_marker_01b0403ee17e460eb0b46a7d1a94c91f.bindPopup(popup_0fbc23ab0bd7480ebc630ae260fb7d49)
             ;
 
             
         
     
-        var marker_7a888353418a49c480bae04a4f826c5b = L.marker(
-            [6.3461388888888886, -1.9921666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_84c155d7a0704b9a84dd28441e00fb4b = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_7a888353418a49c480bae04a4f826c5b.setIcon(icon_84c155d7a0704b9a84dd28441e00fb4b);
+            var circle_marker_c5af6628348744b8b81302fea86ca6fa = L.circleMarker(
+                [6.3461388888888886, -1.9921666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_29ad370f14734d6aac1d7c43d666b0b8 = L.popup({maxWidth: '100%'
+            var popup_cd4ef75f17dc47d3bed154e8d164b6fd = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_415ad8b11b0940bc9786ca4f4b758fb7 = $(`<div id="html_415ad8b11b0940bc9786ca4f4b758fb7" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_29ad370f14734d6aac1d7c43d666b0b8.setContent(html_415ad8b11b0940bc9786ca4f4b758fb7);
+                var html_14b2e62cc5454b8b8068912302c6c765 = $(`<div id="html_14b2e62cc5454b8b8068912302c6c765" style="width: 100.0%; height: 100.0%;">Asanko Gold Ghana</div>`)[0];
+                popup_cd4ef75f17dc47d3bed154e8d164b6fd.setContent(html_14b2e62cc5454b8b8068912302c6c765);
             
 
-            marker_7a888353418a49c480bae04a4f826c5b.bindPopup(popup_29ad370f14734d6aac1d7c43d666b0b8)
+            circle_marker_c5af6628348744b8b81302fea86ca6fa.bindPopup(popup_cd4ef75f17dc47d3bed154e8d164b6fd)
             ;
 
             
         
     
-        var marker_7542e3bda14a4c68b18b0fa5db61b60d = L.marker(
-            [6.3461388888888886, -1.9921666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_79e395337bca45caa36402e6f8ec65e6 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_7542e3bda14a4c68b18b0fa5db61b60d.setIcon(icon_79e395337bca45caa36402e6f8ec65e6);
+            var circle_marker_21942c51159c4dd6a4b2c0f15190f163 = L.circleMarker(
+                [6.3461388888888886, -1.9921666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_4b162508dc7941dca43fabd5d0a5f450 = L.popup({maxWidth: '100%'
+            var popup_a5182034312d4355b2f4a9c2a532c801 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_4eb6ed78d72c443b9acbbfdb77d85efc = $(`<div id="html_4eb6ed78d72c443b9acbbfdb77d85efc" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_4b162508dc7941dca43fabd5d0a5f450.setContent(html_4eb6ed78d72c443b9acbbfdb77d85efc);
+                var html_7ae57576e3404778ad9f03211e5e2325 = $(`<div id="html_7ae57576e3404778ad9f03211e5e2325" style="width: 100.0%; height: 100.0%;">Asanko Gold Ghana</div>`)[0];
+                popup_a5182034312d4355b2f4a9c2a532c801.setContent(html_7ae57576e3404778ad9f03211e5e2325);
             
 
-            marker_7542e3bda14a4c68b18b0fa5db61b60d.bindPopup(popup_4b162508dc7941dca43fabd5d0a5f450)
+            circle_marker_21942c51159c4dd6a4b2c0f15190f163.bindPopup(popup_a5182034312d4355b2f4a9c2a532c801)
             ;
 
             
         
     
-        var marker_3589087c06944840af81fe1597f6e228 = L.marker(
-            [-4.023722222222222, 27.54963888888889],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_c09f87f8604f466ead25b46ad7229848 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_3589087c06944840af81fe1597f6e228.setIcon(icon_c09f87f8604f466ead25b46ad7229848);
+            var circle_marker_730414ac0e2a47a28a281a31c6b369e7 = L.circleMarker(
+                [-4.023722222222222, 27.54963888888889],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_21575c7c54b14f62b09acb7cd7adc45c = L.popup({maxWidth: '100%'
+            var popup_a104177dfad74ad589f8ee80235225fb = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_7578929901f94a20afac1b4899c2004d = $(`<div id="html_7578929901f94a20afac1b4899c2004d" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_21575c7c54b14f62b09acb7cd7adc45c.setContent(html_7578929901f94a20afac1b4899c2004d);
+                var html_f0c10526f4d74395828143cbef60d6fb = $(`<div id="html_f0c10526f4d74395828143cbef60d6fb" style="width: 100.0%; height: 100.0%;">Banro Corporation</div>`)[0];
+                popup_a104177dfad74ad589f8ee80235225fb.setContent(html_f0c10526f4d74395828143cbef60d6fb);
             
 
-            marker_3589087c06944840af81fe1597f6e228.bindPopup(popup_21575c7c54b14f62b09acb7cd7adc45c)
+            circle_marker_730414ac0e2a47a28a281a31c6b369e7.bindPopup(popup_a104177dfad74ad589f8ee80235225fb)
             ;
 
             
         
     
-        var marker_8ccbd64c239b4506988db3c03f1fc0f0 = L.marker(
-            [-29.214083333333335, 18.962694444444445],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_a98d6e258a7e4c4487c74b71421c82ed = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_8ccbd64c239b4506988db3c03f1fc0f0.setIcon(icon_a98d6e258a7e4c4487c74b71421c82ed);
+            var circle_marker_b2086bfc500e46558bd842281d419b06 = L.circleMarker(
+                [-29.214083333333335, 18.962694444444445],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_a308c7b99b5d4cbeb13ef0f42853b218 = L.popup({maxWidth: '100%'
+            var popup_baa4f2b5f7df4ab3b7a785ba37444e41 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_6ecf92ce970a49a28a613e9d4d677f03 = $(`<div id="html_6ecf92ce970a49a28a613e9d4d677f03" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_a308c7b99b5d4cbeb13ef0f42853b218.setContent(html_6ecf92ce970a49a28a613e9d4d677f03);
+                var html_020a05d4f5e24b52932314e915600bf9 = $(`<div id="html_020a05d4f5e24b52932314e915600bf9" style="width: 100.0%; height: 100.0%;">Black  Mountain Mining</div>`)[0];
+                popup_baa4f2b5f7df4ab3b7a785ba37444e41.setContent(html_020a05d4f5e24b52932314e915600bf9);
             
 
-            marker_8ccbd64c239b4506988db3c03f1fc0f0.bindPopup(popup_a308c7b99b5d4cbeb13ef0f42853b218)
+            circle_marker_b2086bfc500e46558bd842281d419b06.bindPopup(popup_baa4f2b5f7df4ab3b7a785ba37444e41)
             ;
 
             
         
     
-        var marker_19c82d151bd5413491c325fd5bb0a094 = L.marker(
-            [-29.25413888888889, 18.792],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_f55b231d9c6c4b3c8c303bcf55678d40 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_19c82d151bd5413491c325fd5bb0a094.setIcon(icon_f55b231d9c6c4b3c8c303bcf55678d40);
+            var circle_marker_aa947ac7568c44459826cdf45d69053b = L.circleMarker(
+                [-29.25413888888889, 18.792],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_7d9574b75ccc4e05a0f49e28a8468538 = L.popup({maxWidth: '100%'
+            var popup_7d685e4eb4e94861b6137e304614f67e = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_ce487d0c3710464eb80fc90af23f428d = $(`<div id="html_ce487d0c3710464eb80fc90af23f428d" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_7d9574b75ccc4e05a0f49e28a8468538.setContent(html_ce487d0c3710464eb80fc90af23f428d);
+                var html_41aac7d4258941f89bf729ba2d2a21a9 = $(`<div id="html_41aac7d4258941f89bf729ba2d2a21a9" style="width: 100.0%; height: 100.0%;">Black  Mountain Mining</div>`)[0];
+                popup_7d685e4eb4e94861b6137e304614f67e.setContent(html_41aac7d4258941f89bf729ba2d2a21a9);
             
 
-            marker_19c82d151bd5413491c325fd5bb0a094.bindPopup(popup_7d9574b75ccc4e05a0f49e28a8468538)
+            circle_marker_aa947ac7568c44459826cdf45d69053b.bindPopup(popup_7d685e4eb4e94861b6137e304614f67e)
             ;
 
             
         
     
-        var marker_5f2a1fc120dc4165ad18da0be7343420 = L.marker(
-            [-27.14386111111111, 22.871666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_71c8ded2114840b18c17cf91e7d2342d = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_5f2a1fc120dc4165ad18da0be7343420.setIcon(icon_71c8ded2114840b18c17cf91e7d2342d);
+            var circle_marker_c7e4d15c660d416a929564a631e11848 = L.circleMarker(
+                [-27.14386111111111, 22.871666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_f5f97065d2dc4a3c9ce24d0871197d52 = L.popup({maxWidth: '100%'
+            var popup_5cb4cc7bfd134ebc8880772d7d52c376 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_14b9eb05451b4e65aaef56b8e93501a5 = $(`<div id="html_14b9eb05451b4e65aaef56b8e93501a5" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_f5f97065d2dc4a3c9ce24d0871197d52.setContent(html_14b9eb05451b4e65aaef56b8e93501a5);
+                var html_04ea35ce0f3b4f5b84f4954bbb29b063 = $(`<div id="html_04ea35ce0f3b4f5b84f4954bbb29b063" style="width: 100.0%; height: 100.0%;">Black Rock Mining operations</div>`)[0];
+                popup_5cb4cc7bfd134ebc8880772d7d52c376.setContent(html_04ea35ce0f3b4f5b84f4954bbb29b063);
             
 
-            marker_5f2a1fc120dc4165ad18da0be7343420.bindPopup(popup_f5f97065d2dc4a3c9ce24d0871197d52)
+            circle_marker_c7e4d15c660d416a929564a631e11848.bindPopup(popup_5cb4cc7bfd134ebc8880772d7d52c376)
             ;
 
             
         
     
-        var marker_04fd17206f634b5e807fe254aa61a3a7 = L.marker(
-            [-27.841416666666667, 23.051666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_ed23ba83b3004e0fb6860685a219f00f = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_04fd17206f634b5e807fe254aa61a3a7.setIcon(icon_ed23ba83b3004e0fb6860685a219f00f);
+            var circle_marker_91615c9044564be19c3e31a74ec0c578 = L.circleMarker(
+                [-27.841416666666667, 23.051666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_cc37577edfb346f8b1bb1eee72add413 = L.popup({maxWidth: '100%'
+            var popup_426058d766174861a0fea89326661e26 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_d7fae2716caf49929ce42910369ad31a = $(`<div id="html_d7fae2716caf49929ce42910369ad31a" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_cc37577edfb346f8b1bb1eee72add413.setContent(html_d7fae2716caf49929ce42910369ad31a);
+                var html_9614fe7bec09490aa51f1391f6003fbb = $(`<div id="html_9614fe7bec09490aa51f1391f6003fbb" style="width: 100.0%; height: 100.0%;">Burk Mining</div>`)[0];
+                popup_426058d766174861a0fea89326661e26.setContent(html_9614fe7bec09490aa51f1391f6003fbb);
             
 
-            marker_04fd17206f634b5e807fe254aa61a3a7.bindPopup(popup_cc37577edfb346f8b1bb1eee72add413)
+            circle_marker_91615c9044564be19c3e31a74ec0c578.bindPopup(popup_426058d766174861a0fea89326661e26)
             ;
 
             
         
     
-        var marker_fd1b07b9a7044884adf3510d171d71cd = L.marker(
-            [-27.841416666666667, 23.051666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_6024c2ea2f9b4d79a27c841b6831b8a4 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_fd1b07b9a7044884adf3510d171d71cd.setIcon(icon_6024c2ea2f9b4d79a27c841b6831b8a4);
+            var circle_marker_05cedbd1ae0a4670932b07d9150f52d7 = L.circleMarker(
+                [-27.841416666666667, 23.051666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_eb50b5fe647f454793afec380b35133c = L.popup({maxWidth: '100%'
+            var popup_3d0988c4783649629235a23efded28c2 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_1317ba0f526b48daad4d53253b7a8df4 = $(`<div id="html_1317ba0f526b48daad4d53253b7a8df4" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_eb50b5fe647f454793afec380b35133c.setContent(html_1317ba0f526b48daad4d53253b7a8df4);
+                var html_f94c75a636e54634bf3f2bf0c2c111a9 = $(`<div id="html_f94c75a636e54634bf3f2bf0c2c111a9" style="width: 100.0%; height: 100.0%;">Diro Manganese</div>`)[0];
+                popup_3d0988c4783649629235a23efded28c2.setContent(html_f94c75a636e54634bf3f2bf0c2c111a9);
             
 
-            marker_fd1b07b9a7044884adf3510d171d71cd.bindPopup(popup_eb50b5fe647f454793afec380b35133c)
+            circle_marker_05cedbd1ae0a4670932b07d9150f52d7.bindPopup(popup_3d0988c4783649629235a23efded28c2)
             ;
 
             
         
     
-        var marker_386e408042464bb18904fdca4e6ad423 = L.marker(
-            [-27.14386111111111, 22.871666666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_bf82f2d0f3534634903e78f84716f02c = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_386e408042464bb18904fdca4e6ad423.setIcon(icon_bf82f2d0f3534634903e78f84716f02c);
+            var circle_marker_30e3fd32fad548d78c63bd1695e45736 = L.circleMarker(
+                [-27.14386111111111, 22.871666666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_7c6e72517b8a487e8c343808cc2ab8f1 = L.popup({maxWidth: '100%'
+            var popup_302d0e4fa2964b24ad6472655cb1ba8e = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_a5dfde890ff144edb7d13d3b7dbc0ef9 = $(`<div id="html_a5dfde890ff144edb7d13d3b7dbc0ef9" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_7c6e72517b8a487e8c343808cc2ab8f1.setContent(html_a5dfde890ff144edb7d13d3b7dbc0ef9);
+                var html_5153a0232e024322b4018e0e33a5eff0 = $(`<div id="html_5153a0232e024322b4018e0e33a5eff0" style="width: 100.0%; height: 100.0%;">DRA</div>`)[0];
+                popup_302d0e4fa2964b24ad6472655cb1ba8e.setContent(html_5153a0232e024322b4018e0e33a5eff0);
             
 
-            marker_386e408042464bb18904fdca4e6ad423.bindPopup(popup_7c6e72517b8a487e8c343808cc2ab8f1)
+            circle_marker_30e3fd32fad548d78c63bd1695e45736.bindPopup(popup_302d0e4fa2964b24ad6472655cb1ba8e)
             ;
 
             
         
     
-        var marker_b479b61367d74c6eadc4eed17fbf2236 = L.marker(
-            [-19.226944444444445, 17.72747222222222],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_38e13ef47fe641f3ad7e30fddae9cd41 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b479b61367d74c6eadc4eed17fbf2236.setIcon(icon_38e13ef47fe641f3ad7e30fddae9cd41);
+            var circle_marker_d9f113eec3f94133ac015adf581d9b36 = L.circleMarker(
+                [-19.226944444444445, 17.72747222222222],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_3ab51322afec491cb5247ac1d47768a5 = L.popup({maxWidth: '100%'
+            var popup_2a385b032ff24bbba1bd2196098c5468 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_6c836fd4614a4e6a959a4d173912aec5 = $(`<div id="html_6c836fd4614a4e6a959a4d173912aec5" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_3ab51322afec491cb5247ac1d47768a5.setContent(html_6c836fd4614a4e6a959a4d173912aec5);
+                var html_f7d78f17a11d4c42bd073d2e81882a5a = $(`<div id="html_f7d78f17a11d4c42bd073d2e81882a5a" style="width: 100.0%; height: 100.0%;">Dundee precious metals</div>`)[0];
+                popup_2a385b032ff24bbba1bd2196098c5468.setContent(html_f7d78f17a11d4c42bd073d2e81882a5a);
             
 
-            marker_b479b61367d74c6eadc4eed17fbf2236.bindPopup(popup_3ab51322afec491cb5247ac1d47768a5)
+            circle_marker_d9f113eec3f94133ac015adf581d9b36.bindPopup(popup_2a385b032ff24bbba1bd2196098c5468)
             ;
 
             
         
     
-        var marker_44396e0abc524e11a5b25aed86580a00 = L.marker(
-            [-26.089583333333334, 28.967083333333335],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_9cbfd783fbfc43dc94b980604802535f = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_44396e0abc524e11a5b25aed86580a00.setIcon(icon_9cbfd783fbfc43dc94b980604802535f);
+            var circle_marker_374550059a0a4fc8a48ebb292d8ff656 = L.circleMarker(
+                [-26.089583333333334, 28.967083333333335],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_83630a9a5c854079bc6f83440c6d2f50 = L.popup({maxWidth: '100%'
+            var popup_0a31f45d31394ad6a754adf7fb7208ed = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_b9f9658cb02241e08addb05f5502ebde = $(`<div id="html_b9f9658cb02241e08addb05f5502ebde" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_83630a9a5c854079bc6f83440c6d2f50.setContent(html_b9f9658cb02241e08addb05f5502ebde);
+                var html_36ff08a8652f43f2ae52213002731e35 = $(`<div id="html_36ff08a8652f43f2ae52213002731e35" style="width: 100.0%; height: 100.0%;">Eskom</div>`)[0];
+                popup_0a31f45d31394ad6a754adf7fb7208ed.setContent(html_36ff08a8652f43f2ae52213002731e35);
             
 
-            marker_44396e0abc524e11a5b25aed86580a00.bindPopup(popup_83630a9a5c854079bc6f83440c6d2f50)
+            circle_marker_374550059a0a4fc8a48ebb292d8ff656.bindPopup(popup_0a31f45d31394ad6a754adf7fb7208ed)
             ;
 
             
         
     
-        var marker_90476ab1bd4449258e7d7449844820c1 = L.marker(
-            [-28.99561111111111, 28.85688888888889],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_8e106c9bce294d9c8643a8c515587a64 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_90476ab1bd4449258e7d7449844820c1.setIcon(icon_8e106c9bce294d9c8643a8c515587a64);
+            var circle_marker_abbc46594c974b4a8c5044c83af2ab67 = L.circleMarker(
+                [-28.99561111111111, 28.85688888888889],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_f699bc833bbd41f4ac70e163d5fb7942 = L.popup({maxWidth: '100%'
+            var popup_95d41d14f12a4885825048fb52f4abe4 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_a59cc4512b0747469f59e81c9dd16d81 = $(`<div id="html_a59cc4512b0747469f59e81c9dd16d81" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_f699bc833bbd41f4ac70e163d5fb7942.setContent(html_a59cc4512b0747469f59e81c9dd16d81);
+                var html_cf4cc43e95b646cc977ac5974d542710 = $(`<div id="html_cf4cc43e95b646cc977ac5974d542710" style="width: 100.0%; height: 100.0%;">GEM Diamonds</div>`)[0];
+                popup_95d41d14f12a4885825048fb52f4abe4.setContent(html_cf4cc43e95b646cc977ac5974d542710);
             
 
-            marker_90476ab1bd4449258e7d7449844820c1.bindPopup(popup_f699bc833bbd41f4ac70e163d5fb7942)
+            circle_marker_abbc46594c974b4a8c5044c83af2ab67.bindPopup(popup_95d41d14f12a4885825048fb52f4abe4)
             ;
 
             
         
     
-        var marker_a1154ecd434e4c4781f67ae7c57c05e5 = L.marker(
-            [-25.523944444444446, 27.132472222222223],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_26c385890b7b4361bcb950f52fb08488 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_a1154ecd434e4c4781f67ae7c57c05e5.setIcon(icon_26c385890b7b4361bcb950f52fb08488);
+            var circle_marker_3627b2c08cb94a948621db33ac2cf327 = L.circleMarker(
+                [-25.523944444444446, 27.132472222222223],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_e62a09f00e1e4446b6f3c3f9bcd8c855 = L.popup({maxWidth: '100%'
+            var popup_e8e174c2f9f444c1ad464d15d191b55f = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_902b0b51559d41efa97fc01ed8e410ab = $(`<div id="html_902b0b51559d41efa97fc01ed8e410ab" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_e62a09f00e1e4446b6f3c3f9bcd8c855.setContent(html_902b0b51559d41efa97fc01ed8e410ab);
+                var html_af04e65e97414513a4a9fc5f49caff29 = $(`<div id="html_af04e65e97414513a4a9fc5f49caff29" style="width: 100.0%; height: 100.0%;">Iiitha Mining (Pty) Ltd</div>`)[0];
+                popup_e8e174c2f9f444c1ad464d15d191b55f.setContent(html_af04e65e97414513a4a9fc5f49caff29);
             
 
-            marker_a1154ecd434e4c4781f67ae7c57c05e5.bindPopup(popup_e62a09f00e1e4446b6f3c3f9bcd8c855)
+            circle_marker_3627b2c08cb94a948621db33ac2cf327.bindPopup(popup_e8e174c2f9f444c1ad464d15d191b55f)
             ;
 
             
         
     
-        var marker_7c86dbff636e40408e9cc24a981c9eb5 = L.marker(
-            [-11.770555555555555, 27.23675],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_43286897dabc4ded9076975727f474e5 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_7c86dbff636e40408e9cc24a981c9eb5.setIcon(icon_43286897dabc4ded9076975727f474e5);
+            var circle_marker_317f335b322b4683aab535107a8fc006 = L.circleMarker(
+                [-11.770555555555555, 27.23675],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_a8d9d05d93fa4265b9ddb835b0c1b81c = L.popup({maxWidth: '100%'
+            var popup_0821fedf4c0944a3a1e065031f70e3d6 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_54811d1c9f4344aa8fe2796ab312f6d0 = $(`<div id="html_54811d1c9f4344aa8fe2796ab312f6d0" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_a8d9d05d93fa4265b9ddb835b0c1b81c.setContent(html_54811d1c9f4344aa8fe2796ab312f6d0);
+                var html_0a6cada555e1441ba5a8c96567823d73 = $(`<div id="html_0a6cada555e1441ba5a8c96567823d73" style="width: 100.0%; height: 100.0%;">Katanga Contracting Services</div>`)[0];
+                popup_0821fedf4c0944a3a1e065031f70e3d6.setContent(html_0a6cada555e1441ba5a8c96567823d73);
             
 
-            marker_7c86dbff636e40408e9cc24a981c9eb5.bindPopup(popup_a8d9d05d93fa4265b9ddb835b0c1b81c)
+            circle_marker_317f335b322b4683aab535107a8fc006.bindPopup(popup_0821fedf4c0944a3a1e065031f70e3d6)
             ;
 
             
         
     
-        var marker_6a9145c0769648e48abd572fce3a368f = L.marker(
-            [-10.790305555555555, 25.794833333333333],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_6df592084eef437e9c3ffa2497a76f6a = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_6a9145c0769648e48abd572fce3a368f.setIcon(icon_6df592084eef437e9c3ffa2497a76f6a);
+            var circle_marker_cddf030a8d7745f0816310179e97ee07 = L.circleMarker(
+                [-10.790305555555555, 25.794833333333333],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_2a3f6fde6f52465eb06e801deecabd90 = L.popup({maxWidth: '100%'
+            var popup_504b86fc5bc04383a89746d3cf97edb3 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_187825646b514b1fa40b2cb1db613825 = $(`<div id="html_187825646b514b1fa40b2cb1db613825" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_2a3f6fde6f52465eb06e801deecabd90.setContent(html_187825646b514b1fa40b2cb1db613825);
+                var html_b74ce21377a04ef6b6a722fb0b340fb3 = $(`<div id="html_b74ce21377a04ef6b6a722fb0b340fb3" style="width: 100.0%; height: 100.0%;">Katanga Mine</div>`)[0];
+                popup_504b86fc5bc04383a89746d3cf97edb3.setContent(html_b74ce21377a04ef6b6a722fb0b340fb3);
             
 
-            marker_6a9145c0769648e48abd572fce3a368f.bindPopup(popup_2a3f6fde6f52465eb06e801deecabd90)
+            circle_marker_cddf030a8d7745f0816310179e97ee07.bindPopup(popup_504b86fc5bc04383a89746d3cf97edb3)
             ;
 
             
         
     
-        var marker_82d218237f6d4efbb2393682ef615a7a = L.marker(
-            [-27.732777777777777, 23.01227777777778],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_b62ce591c07646da818991eec4951939 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_82d218237f6d4efbb2393682ef615a7a.setIcon(icon_b62ce591c07646da818991eec4951939);
+            var circle_marker_8fded3abde764b5da974f9d79a86bd7b = L.circleMarker(
+                [-27.732777777777777, 23.01227777777778],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_2bfe0bb5aac249b7a5f7b682c973ea1c = L.popup({maxWidth: '100%'
+            var popup_63ab924b4ad94736aa437944cd4400db = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_68d0ad1bb4d54561978706b78978559a = $(`<div id="html_68d0ad1bb4d54561978706b78978559a" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_2bfe0bb5aac249b7a5f7b682c973ea1c.setContent(html_68d0ad1bb4d54561978706b78978559a);
+                var html_4e3dfe7a73664ed484164d2f87a54aa4 = $(`<div id="html_4e3dfe7a73664ed484164d2f87a54aa4" style="width: 100.0%; height: 100.0%;">Kumba</div>`)[0];
+                popup_63ab924b4ad94736aa437944cd4400db.setContent(html_4e3dfe7a73664ed484164d2f87a54aa4);
             
 
-            marker_82d218237f6d4efbb2393682ef615a7a.bindPopup(popup_2bfe0bb5aac249b7a5f7b682c973ea1c)
+            circle_marker_8fded3abde764b5da974f9d79a86bd7b.bindPopup(popup_63ab924b4ad94736aa437944cd4400db)
             ;
 
             
         
     
-        var marker_18bc1e2cdb9547ab8598c9bd60ee8136 = L.marker(
-            [-28.380388888888888, 22.963583333333332],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_00a08f79914e4d148bae9b46be196b0e = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_18bc1e2cdb9547ab8598c9bd60ee8136.setIcon(icon_00a08f79914e4d148bae9b46be196b0e);
+            var circle_marker_ff8ef623004a4f61ba22ba1f67810ff4 = L.circleMarker(
+                [-28.380388888888888, 22.963583333333332],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_38ff8f47fa55487cacd95ed322b8f8b6 = L.popup({maxWidth: '100%'
+            var popup_1d38918db99040baa5eb38a3e7375300 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_e794b763bfae4c089541285c65b7570f = $(`<div id="html_e794b763bfae4c089541285c65b7570f" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_38ff8f47fa55487cacd95ed322b8f8b6.setContent(html_e794b763bfae4c089541285c65b7570f);
+                var html_5e8d260d0c284b45a3d5fe35df669f39 = $(`<div id="html_5e8d260d0c284b45a3d5fe35df669f39" style="width: 100.0%; height: 100.0%;">Kumba</div>`)[0];
+                popup_1d38918db99040baa5eb38a3e7375300.setContent(html_5e8d260d0c284b45a3d5fe35df669f39);
             
 
-            marker_18bc1e2cdb9547ab8598c9bd60ee8136.bindPopup(popup_38ff8f47fa55487cacd95ed322b8f8b6)
+            circle_marker_ff8ef623004a4f61ba22ba1f67810ff4.bindPopup(popup_1d38918db99040baa5eb38a3e7375300)
             ;
 
             
         
     
-        var marker_b770a80de9864764b462941a25ed209e = L.marker(
-            [2.0230555555555556, 45.29558333333333],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_34dd70f0600041eeb47625bb0418a32f = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b770a80de9864764b462941a25ed209e.setIcon(icon_34dd70f0600041eeb47625bb0418a32f);
+            var circle_marker_2ab7bfa52db841e6a2b5ebb9f2954278 = L.circleMarker(
+                [2.0230555555555556, 45.29558333333333],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_6ec7267e48894347b56eebc5475f2ae3 = L.popup({maxWidth: '100%'
+            var popup_916988aa5b3e4f2ca72f2800969e6204 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_b53793b1a17f451a8ae0f768cbf2dd9a = $(`<div id="html_b53793b1a17f451a8ae0f768cbf2dd9a" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_6ec7267e48894347b56eebc5475f2ae3.setContent(html_b53793b1a17f451a8ae0f768cbf2dd9a);
+                var html_f7d2238480b54dffb4836adaea5bc73a = $(`<div id="html_f7d2238480b54dffb4836adaea5bc73a" style="width: 100.0%; height: 100.0%;">MC Process Global</div>`)[0];
+                popup_916988aa5b3e4f2ca72f2800969e6204.setContent(html_f7d2238480b54dffb4836adaea5bc73a);
             
 
-            marker_b770a80de9864764b462941a25ed209e.bindPopup(popup_6ec7267e48894347b56eebc5475f2ae3)
+            circle_marker_2ab7bfa52db841e6a2b5ebb9f2954278.bindPopup(popup_916988aa5b3e4f2ca72f2800969e6204)
             ;
 
             
         
     
-        var marker_b37b62655942412c834e9f60944b5518 = L.marker(
-            [-21.98375, 15.765888888888888],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_565bd80abf7b4c3a9bff18c052a348d2 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b37b62655942412c834e9f60944b5518.setIcon(icon_565bd80abf7b4c3a9bff18c052a348d2);
+            var circle_marker_46e5cc2055854f78b3fe39ca5ada7f75 = L.circleMarker(
+                [-21.98375, 15.765888888888888],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_47b0bc30619d46bd9ad145a97ce4dc8c = L.popup({maxWidth: '100%'
+            var popup_5d7afd9bb4394834b1ed20c5ed1f0b44 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_c1274839881c4fc8997f26d4df81365b = $(`<div id="html_c1274839881c4fc8997f26d4df81365b" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_47b0bc30619d46bd9ad145a97ce4dc8c.setContent(html_c1274839881c4fc8997f26d4df81365b);
+                var html_a0bee1a818524eae8b3c05ad4e871243 = $(`<div id="html_a0bee1a818524eae8b3c05ad4e871243" style="width: 100.0%; height: 100.0%;">Navachab Mine</div>`)[0];
+                popup_5d7afd9bb4394834b1ed20c5ed1f0b44.setContent(html_a0bee1a818524eae8b3c05ad4e871243);
             
 
-            marker_b37b62655942412c834e9f60944b5518.bindPopup(popup_47b0bc30619d46bd9ad145a97ce4dc8c)
+            circle_marker_46e5cc2055854f78b3fe39ca5ada7f75.bindPopup(popup_5d7afd9bb4394834b1ed20c5ed1f0b44)
             ;
 
             
         
     
-        var marker_e129f33d13ea412bba079b0af768f601 = L.marker(
-            [-26.709583333333335, 27.07488888888889],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_46069439ca7c462c9aef015544f5926d = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_e129f33d13ea412bba079b0af768f601.setIcon(icon_46069439ca7c462c9aef015544f5926d);
+            var circle_marker_95046e8648444ec593cf5b232b69c1de = L.circleMarker(
+                [-26.709583333333335, 27.07488888888889],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_11dd997290c5498fb34545d40ef137ed = L.popup({maxWidth: '100%'
+            var popup_d2d05f3e65ce402ab4b42fe6f205890d = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_5e6be0b51eb64424a370c028c2de2b18 = $(`<div id="html_5e6be0b51eb64424a370c028c2de2b18" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_11dd997290c5498fb34545d40ef137ed.setContent(html_5e6be0b51eb64424a370c028c2de2b18);
+                var html_c4678023d9d049f9a1018f47dd257b44 = $(`<div id="html_c4678023d9d049f9a1018f47dd257b44" style="width: 100.0%; height: 100.0%;">Nestle Potchefstroom</div>`)[0];
+                popup_d2d05f3e65ce402ab4b42fe6f205890d.setContent(html_c4678023d9d049f9a1018f47dd257b44);
             
 
-            marker_e129f33d13ea412bba079b0af768f601.bindPopup(popup_11dd997290c5498fb34545d40ef137ed)
+            circle_marker_95046e8648444ec593cf5b232b69c1de.bindPopup(popup_d2d05f3e65ce402ab4b42fe6f205890d)
             ;
 
             
         
     
-        var marker_1d6565ac3f744b57a05cb9fb0207565b = L.marker(
-            [-28.0375, 23.053916666666666],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_ace6113a06974d87b2d290f7008d7814 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_1d6565ac3f744b57a05cb9fb0207565b.setIcon(icon_ace6113a06974d87b2d290f7008d7814);
+            var circle_marker_4f45a2ee3a30457286c29d24d3b0fa7f = L.circleMarker(
+                [-28.0375, 23.053916666666666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_9dfdb924855048aa893c3b5d94d36cc4 = L.popup({maxWidth: '100%'
+            var popup_66e0c4e938744b9ebc9a98b796377ea4 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_39430790021b4e57ba0b763c133218f8 = $(`<div id="html_39430790021b4e57ba0b763c133218f8" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_9dfdb924855048aa893c3b5d94d36cc4.setContent(html_39430790021b4e57ba0b763c133218f8);
+                var html_ab5eb617191643628a1bc887b07f0ea0 = $(`<div id="html_ab5eb617191643628a1bc887b07f0ea0" style="width: 100.0%; height: 100.0%;">PMG</div>`)[0];
+                popup_66e0c4e938744b9ebc9a98b796377ea4.setContent(html_ab5eb617191643628a1bc887b07f0ea0);
             
 
-            marker_1d6565ac3f744b57a05cb9fb0207565b.bindPopup(popup_9dfdb924855048aa893c3b5d94d36cc4)
+            circle_marker_4f45a2ee3a30457286c29d24d3b0fa7f.bindPopup(popup_66e0c4e938744b9ebc9a98b796377ea4)
             ;
 
             
         
     
-        var marker_9737ae70ad22448bac97e9affc07ea35 = L.marker(
-            [-21.98375, 15.765888888888888],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_cfb147e3308f4190800f89b3feecd032 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_9737ae70ad22448bac97e9affc07ea35.setIcon(icon_cfb147e3308f4190800f89b3feecd032);
+            var circle_marker_b9a26c42846f409c97e9379310c3e7c7 = L.circleMarker(
+                [-21.98375, 15.765888888888888],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_b805fd30ff584f7e8323c053269381bd = L.popup({maxWidth: '100%'
+            var popup_a04eef4ab17042be90b025f52c5f7445 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_a6c98ea34ef44061bdd26ba58e6d1f32 = $(`<div id="html_a6c98ea34ef44061bdd26ba58e6d1f32" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_b805fd30ff584f7e8323c053269381bd.setContent(html_a6c98ea34ef44061bdd26ba58e6d1f32);
+                var html_d9e8910adc9d4e82a42baa8896e02ff6 = $(`<div id="html_d9e8910adc9d4e82a42baa8896e02ff6" style="width: 100.0%; height: 100.0%;">QKR Namibia</div>`)[0];
+                popup_a04eef4ab17042be90b025f52c5f7445.setContent(html_d9e8910adc9d4e82a42baa8896e02ff6);
             
 
-            marker_9737ae70ad22448bac97e9affc07ea35.bindPopup(popup_b805fd30ff584f7e8323c053269381bd)
+            circle_marker_b9a26c42846f409c97e9379310c3e7c7.bindPopup(popup_a04eef4ab17042be90b025f52c5f7445)
             ;
 
             
         
     
-        var marker_9db56a9b33244c33b22d55bd559fc2eb = L.marker(
-            [-18.31763888888889, 29.975416666666668],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_2880ae04952f46a3ad455701eff21604 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_9db56a9b33244c33b22d55bd559fc2eb.setIcon(icon_2880ae04952f46a3ad455701eff21604);
+            var circle_marker_28703e7081544bf1acb83d99769e1849 = L.circleMarker(
+                [-18.31763888888889, 29.975416666666668],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_4c21d5335eae44c8a5dc09c617ddd5fc = L.popup({maxWidth: '100%'
+            var popup_d402c8e894794c6bb1d36599420b853b = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_2f8af98a89774f86ae3372b00df0c01e = $(`<div id="html_2f8af98a89774f86ae3372b00df0c01e" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_4c21d5335eae44c8a5dc09c617ddd5fc.setContent(html_2f8af98a89774f86ae3372b00df0c01e);
+                var html_cd7532b8ff0945c5af571693e53b747d = $(`<div id="html_cd7532b8ff0945c5af571693e53b747d" style="width: 100.0%; height: 100.0%;">RioZim</div>`)[0];
+                popup_d402c8e894794c6bb1d36599420b853b.setContent(html_cd7532b8ff0945c5af571693e53b747d);
             
 
-            marker_9db56a9b33244c33b22d55bd559fc2eb.bindPopup(popup_4c21d5335eae44c8a5dc09c617ddd5fc)
+            circle_marker_28703e7081544bf1acb83d99769e1849.bindPopup(popup_d402c8e894794c6bb1d36599420b853b)
             ;
 
             
         
     
-        var marker_1b358fcae72a49269a53ca31d4274876 = L.marker(
-            [-28.191833333333335, 23.098055555555554],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_a1cefd6df9bd4b4aa33f1a3d3cdb6dd0 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_1b358fcae72a49269a53ca31d4274876.setIcon(icon_a1cefd6df9bd4b4aa33f1a3d3cdb6dd0);
+            var circle_marker_171f90c273ee4df4bb9c99082bab34b2 = L.circleMarker(
+                [-28.191833333333335, 23.098055555555554],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_d4ed9b916370446da578201025e48266 = L.popup({maxWidth: '100%'
+            var popup_06fa1761e1a64c69a1331c045975e55f = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_2b34a8219e154ab988641a50f1a3ea11 = $(`<div id="html_2b34a8219e154ab988641a50f1a3ea11" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_d4ed9b916370446da578201025e48266.setContent(html_2b34a8219e154ab988641a50f1a3ea11);
+                var html_178c7eecba554cb285919e2ed2974aac = $(`<div id="html_178c7eecba554cb285919e2ed2974aac" style="width: 100.0%; height: 100.0%;">Sedibeng Iron Ore</div>`)[0];
+                popup_06fa1761e1a64c69a1331c045975e55f.setContent(html_178c7eecba554cb285919e2ed2974aac);
             
 
-            marker_1b358fcae72a49269a53ca31d4274876.bindPopup(popup_d4ed9b916370446da578201025e48266)
+            circle_marker_171f90c273ee4df4bb9c99082bab34b2.bindPopup(popup_06fa1761e1a64c69a1331c045975e55f)
             ;
 
             
         
     
-        var marker_55983ad1c29045fc89e538d3eded0ec3 = L.marker(
-            [-28.191833333333335, 23.098055555555554],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_dc441defe4cb49fbb55bd1c6585602c2 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_55983ad1c29045fc89e538d3eded0ec3.setIcon(icon_dc441defe4cb49fbb55bd1c6585602c2);
+            var circle_marker_1195c9c8441841bf88c6da3fc488b582 = L.circleMarker(
+                [-28.191833333333335, 23.098055555555554],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_a03ea7bc83b2488c9040385b6e5575a1 = L.popup({maxWidth: '100%'
+            var popup_20e27b9d9f5e41e681656686ace5fa24 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_51eface95cc74a8e829186302e40c8bf = $(`<div id="html_51eface95cc74a8e829186302e40c8bf" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_a03ea7bc83b2488c9040385b6e5575a1.setContent(html_51eface95cc74a8e829186302e40c8bf);
+                var html_537e09d3752e49feaab8429e4bac08fc = $(`<div id="html_537e09d3752e49feaab8429e4bac08fc" style="width: 100.0%; height: 100.0%;">Sedibeng Iron Ore (Pty) Ltd</div>`)[0];
+                popup_20e27b9d9f5e41e681656686ace5fa24.setContent(html_537e09d3752e49feaab8429e4bac08fc);
             
 
-            marker_55983ad1c29045fc89e538d3eded0ec3.bindPopup(popup_a03ea7bc83b2488c9040385b6e5575a1)
+            circle_marker_1195c9c8441841bf88c6da3fc488b582.bindPopup(popup_20e27b9d9f5e41e681656686ace5fa24)
             ;
 
             
         
     
-        var marker_274fcbfb754b49fc8aea6a7a3f43639e = L.marker(
-            [-28.191833333333335, 23.098055555555554],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_46c88dc7d3d444c5b231351cde2a6767 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_274fcbfb754b49fc8aea6a7a3f43639e.setIcon(icon_46c88dc7d3d444c5b231351cde2a6767);
+            var circle_marker_100e40dbe2204646b568a0ae26830362 = L.circleMarker(
+                [-28.191833333333335, 23.098055555555554],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_96607ac0c6fc4bcda4fb320b069abdf5 = L.popup({maxWidth: '100%'
+            var popup_9878afe205924e60a6550caaee03f3d1 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_2110ad63d87d420f8a319765536d958b = $(`<div id="html_2110ad63d87d420f8a319765536d958b" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_96607ac0c6fc4bcda4fb320b069abdf5.setContent(html_2110ad63d87d420f8a319765536d958b);
+                var html_f3ab21733da843f1bf535e4b626f48fb = $(`<div id="html_f3ab21733da843f1bf535e4b626f48fb" style="width: 100.0%; height: 100.0%;">Sedibeng Iron Ore (Pty) Ltd</div>`)[0];
+                popup_9878afe205924e60a6550caaee03f3d1.setContent(html_f3ab21733da843f1bf535e4b626f48fb);
             
 
-            marker_274fcbfb754b49fc8aea6a7a3f43639e.bindPopup(popup_96607ac0c6fc4bcda4fb320b069abdf5)
+            circle_marker_100e40dbe2204646b568a0ae26830362.bindPopup(popup_9878afe205924e60a6550caaee03f3d1)
             ;
 
             
         
     
-        var marker_490279f289cf4a31a99c167b6b4c7308 = L.marker(
-            [-19.226944444444445, 17.72747222222222],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_4d38244f8e0c4026bd1518453fcde0e7 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_490279f289cf4a31a99c167b6b4c7308.setIcon(icon_4d38244f8e0c4026bd1518453fcde0e7);
+            var circle_marker_fc73d350f71a4993b40b8315659c7dbc = L.circleMarker(
+                [-19.226944444444445, 17.72747222222222],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_299c9b5ce3c848efbdc4c079c7a9bd65 = L.popup({maxWidth: '100%'
+            var popup_8b8ffd42a89c439aaa1bd4fc078a797e = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_fcbcdb42e01e43ba805e688d91011f86 = $(`<div id="html_fcbcdb42e01e43ba805e688d91011f86" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_299c9b5ce3c848efbdc4c079c7a9bd65.setContent(html_fcbcdb42e01e43ba805e688d91011f86);
+                var html_e7ebf918cb764a8cae0aa0e60aabcbfb = $(`<div id="html_e7ebf918cb764a8cae0aa0e60aabcbfb" style="width: 100.0%; height: 100.0%;">SNC Lavilin</div>`)[0];
+                popup_8b8ffd42a89c439aaa1bd4fc078a797e.setContent(html_e7ebf918cb764a8cae0aa0e60aabcbfb);
             
 
-            marker_490279f289cf4a31a99c167b6b4c7308.bindPopup(popup_299c9b5ce3c848efbdc4c079c7a9bd65)
+            circle_marker_fc73d350f71a4993b40b8315659c7dbc.bindPopup(popup_8b8ffd42a89c439aaa1bd4fc078a797e)
             ;
 
             
         
     
-        var marker_1ca830b2f8f04e1f91d77eb47aa05b83 = L.marker(
-            [-19.226944444444445, 17.72747222222222],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_3ebffb3d60964632911d673ef7f74169 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_1ca830b2f8f04e1f91d77eb47aa05b83.setIcon(icon_3ebffb3d60964632911d673ef7f74169);
+            var circle_marker_dad9c8a51a5348b783d89fb46b6f0311 = L.circleMarker(
+                [-19.226944444444445, 17.72747222222222],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_190cd06cda234dfabf402cbe0f14b6eb = L.popup({maxWidth: '100%'
+            var popup_ca1a99f2d861401f9839adb02436da79 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_573612359d0344f09e530af416742798 = $(`<div id="html_573612359d0344f09e530af416742798" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_190cd06cda234dfabf402cbe0f14b6eb.setContent(html_573612359d0344f09e530af416742798);
+                var html_ac62f0968f4748efb6bfa2971aedb2d4 = $(`<div id="html_ac62f0968f4748efb6bfa2971aedb2d4" style="width: 100.0%; height: 100.0%;">SNC Lavilin</div>`)[0];
+                popup_ca1a99f2d861401f9839adb02436da79.setContent(html_ac62f0968f4748efb6bfa2971aedb2d4);
             
 
-            marker_1ca830b2f8f04e1f91d77eb47aa05b83.bindPopup(popup_190cd06cda234dfabf402cbe0f14b6eb)
+            circle_marker_dad9c8a51a5348b783d89fb46b6f0311.bindPopup(popup_ca1a99f2d861401f9839adb02436da79)
             ;
 
             
         
     
-        var marker_6abcb40d2fc94054a717b7a672c275d9 = L.marker(
-            [-22.588055555555556, 15.018805555555556],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_d1d9e3319e2746e097959d811cbf7be3 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_6abcb40d2fc94054a717b7a672c275d9.setIcon(icon_d1d9e3319e2746e097959d811cbf7be3);
+            var circle_marker_615e258bc65944b28c1c70c9cdeeae9a = L.circleMarker(
+                [-22.588055555555556, 15.018805555555556],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_498603b506d4425dbab013f551d77bd5 = L.popup({maxWidth: '100%'
+            var popup_a514c9efeace48dc8553c714aaba53d1 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_e3ca40baa82943ceb19026eefb35be60 = $(`<div id="html_e3ca40baa82943ceb19026eefb35be60" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_498603b506d4425dbab013f551d77bd5.setContent(html_e3ca40baa82943ceb19026eefb35be60);
+                var html_57a20641bc7949ff8c7eab456ad047d3 = $(`<div id="html_57a20641bc7949ff8c7eab456ad047d3" style="width: 100.0%; height: 100.0%;">Swakop Uranium</div>`)[0];
+                popup_a514c9efeace48dc8553c714aaba53d1.setContent(html_57a20641bc7949ff8c7eab456ad047d3);
             
 
-            marker_6abcb40d2fc94054a717b7a672c275d9.bindPopup(popup_498603b506d4425dbab013f551d77bd5)
+            circle_marker_615e258bc65944b28c1c70c9cdeeae9a.bindPopup(popup_a514c9efeace48dc8553c714aaba53d1)
             ;
 
             
         
     
-        var marker_68999708ad4945fb95ab91365ff260a2 = L.marker(
-            [38.89263888888889, 37.663472222222225],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_708c704e49654ac1a2db66877aee7511 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_68999708ad4945fb95ab91365ff260a2.setIcon(icon_708c704e49654ac1a2db66877aee7511);
+            var circle_marker_83087715461e47ee9dace9b773ef7ea4 = L.circleMarker(
+                [38.89263888888889, 37.663472222222225],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_4e1b5c566d6a49ba9695cdc0a410b268 = L.popup({maxWidth: '100%'
+            var popup_ad49f5d840314bb48ddd35452ba9484a = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_ca3af750e7904b678080ceff39dddc88 = $(`<div id="html_ca3af750e7904b678080ceff39dddc88" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_4e1b5c566d6a49ba9695cdc0a410b268.setContent(html_ca3af750e7904b678080ceff39dddc88);
+                var html_c4feb65e4ba34effaebcede604695b3e = $(`<div id="html_c4feb65e4ba34effaebcede604695b3e" style="width: 100.0%; height: 100.0%;">Traxy Africa (Pty) Ltd</div>`)[0];
+                popup_ad49f5d840314bb48ddd35452ba9484a.setContent(html_c4feb65e4ba34effaebcede604695b3e);
             
 
-            marker_68999708ad4945fb95ab91365ff260a2.bindPopup(popup_4e1b5c566d6a49ba9695cdc0a410b268)
+            circle_marker_83087715461e47ee9dace9b773ef7ea4.bindPopup(popup_ad49f5d840314bb48ddd35452ba9484a)
             ;
 
             
         
     
-        var marker_74e7b98d0f8b4d3da399eedfa2eef972 = L.marker(
-            [-27.39397222222222, 22.968555555555554],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_9139cb6da97945b7b4b5bbef10511c35 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_74e7b98d0f8b4d3da399eedfa2eef972.setIcon(icon_9139cb6da97945b7b4b5bbef10511c35);
+            var circle_marker_ef6c63eb76ba4ab8b3c19745053f51f2 = L.circleMarker(
+                [-27.39397222222222, 22.968555555555554],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_e6ef157c483b430e9e5e73dca5975be7 = L.popup({maxWidth: '100%'
+            var popup_cf0be7f3460a4ccab6ddef220484a55b = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_8528ff639fb042da80dcd29f2a3d6ab6 = $(`<div id="html_8528ff639fb042da80dcd29f2a3d6ab6" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_e6ef157c483b430e9e5e73dca5975be7.setContent(html_8528ff639fb042da80dcd29f2a3d6ab6);
+                var html_44651a7a81ed463a8d7ba2be86dbdd71 = $(`<div id="html_44651a7a81ed463a8d7ba2be86dbdd71" style="width: 100.0%; height: 100.0%;">Tshipi e Ntle Manganese Minig (Pty) Ltd</div>`)[0];
+                popup_cf0be7f3460a4ccab6ddef220484a55b.setContent(html_44651a7a81ed463a8d7ba2be86dbdd71);
             
 
-            marker_74e7b98d0f8b4d3da399eedfa2eef972.bindPopup(popup_e6ef157c483b430e9e5e73dca5975be7)
+            circle_marker_ef6c63eb76ba4ab8b3c19745053f51f2.bindPopup(popup_cf0be7f3460a4ccab6ddef220484a55b)
             ;
 
             
         
     
-        var marker_25b01eb7aa4a42919c9477b5134f767f = L.marker(
-            [-27.39397222222222, 22.968555555555554],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_934d76a3e636477784e2d123091ea1ca = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_25b01eb7aa4a42919c9477b5134f767f.setIcon(icon_934d76a3e636477784e2d123091ea1ca);
+            var circle_marker_37fd1a4416e349e98c46400b52bb2aff = L.circleMarker(
+                [-27.39397222222222, 22.968555555555554],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_ae91bf73b18b48ab948c8655c6063313 = L.popup({maxWidth: '100%'
+            var popup_20d042876d684c97b84709d0635cfe30 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_0ae0718fd7e5481187a2a7ab181ba4ed = $(`<div id="html_0ae0718fd7e5481187a2a7ab181ba4ed" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_ae91bf73b18b48ab948c8655c6063313.setContent(html_0ae0718fd7e5481187a2a7ab181ba4ed);
+                var html_77b95a307f31434e986a433de509dc41 = $(`<div id="html_77b95a307f31434e986a433de509dc41" style="width: 100.0%; height: 100.0%;">Tshipi e Ntle Manganese Mining (Pty) Ltd</div>`)[0];
+                popup_20d042876d684c97b84709d0635cfe30.setContent(html_77b95a307f31434e986a433de509dc41);
             
 
-            marker_25b01eb7aa4a42919c9477b5134f767f.bindPopup(popup_ae91bf73b18b48ab948c8655c6063313)
+            circle_marker_37fd1a4416e349e98c46400b52bb2aff.bindPopup(popup_20d042876d684c97b84709d0635cfe30)
             ;
 
             
         
     
-        var marker_3db2be80b52d440b98f0a14408bfced0 = L.marker(
-            [-26.189944444444443, 28.269444444444446],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_20cacbec4c004eddb52ff90fb846fb87 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_3db2be80b52d440b98f0a14408bfced0.setIcon(icon_20cacbec4c004eddb52ff90fb846fb87);
+            var circle_marker_9c03dacf28c6472c82dbf849d0142137 = L.circleMarker(
+                [-26.189944444444443, 28.269444444444446],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_078c009e8b4a427e911ecf23c94e519c = L.popup({maxWidth: '100%'
+            var popup_1b500f7a395245a7a5f75ff0c2206b82 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_b5996a4f5abd431b85d989c2ea4b1d71 = $(`<div id="html_b5996a4f5abd431b85d989c2ea4b1d71" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_078c009e8b4a427e911ecf23c94e519c.setContent(html_b5996a4f5abd431b85d989c2ea4b1d71);
+                var html_51e9b696915643af829c9063ab02f5e4 = $(`<div id="html_51e9b696915643af829c9063ab02f5e4" style="width: 100.0%; height: 100.0%;">Unilever Boksburg</div>`)[0];
+                popup_1b500f7a395245a7a5f75ff0c2206b82.setContent(html_51e9b696915643af829c9063ab02f5e4);
             
 
-            marker_3db2be80b52d440b98f0a14408bfced0.bindPopup(popup_078c009e8b4a427e911ecf23c94e519c)
+            circle_marker_9c03dacf28c6472c82dbf849d0142137.bindPopup(popup_1b500f7a395245a7a5f75ff0c2206b82)
             ;
 
             
         
     
-        var marker_0f3979742a1b411c85cab1c1fb92df32 = L.marker(
-            [-26.220694444444444, 28.270777777777777],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_876c62f870f2433cb5ac1869bbdcb354 = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_0f3979742a1b411c85cab1c1fb92df32.setIcon(icon_876c62f870f2433cb5ac1869bbdcb354);
+            var circle_marker_14b61d2ae44f49b5bede94c7ddf1cf29 = L.circleMarker(
+                [-26.220694444444444, 28.270777777777777],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_307e79c4fe1b4fff857cf8f738256884 = L.popup({maxWidth: '100%'
+            var popup_05c8a7f06d974a168223eadfd58a82c3 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_8f90457a9dd14d46b11d927673122c4b = $(`<div id="html_8f90457a9dd14d46b11d927673122c4b" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_307e79c4fe1b4fff857cf8f738256884.setContent(html_8f90457a9dd14d46b11d927673122c4b);
+                var html_bdd259f126844dfab088c8846a5d4f32 = $(`<div id="html_bdd259f126844dfab088c8846a5d4f32" style="width: 100.0%; height: 100.0%;">Unilever SA</div>`)[0];
+                popup_05c8a7f06d974a168223eadfd58a82c3.setContent(html_bdd259f126844dfab088c8846a5d4f32);
             
 
-            marker_0f3979742a1b411c85cab1c1fb92df32.bindPopup(popup_307e79c4fe1b4fff857cf8f738256884)
+            circle_marker_14b61d2ae44f49b5bede94c7ddf1cf29.bindPopup(popup_05c8a7f06d974a168223eadfd58a82c3)
             ;
 
             
         
     
-        var marker_ae8eab7f33db4509bdfde0e91484f5fe = L.marker(
-            [-26.189944444444443, 28.269444444444446],
-            {
-                icon: new L.Icon.Default(),
-                }
-            ).addTo(feature_group_738c4829df814b79a83a57046e91929b);
-        
-    
-
-                var icon_c78882f7f878497388f45c3cbf663e2d = L.AwesomeMarkers.icon({
-                    icon: 'info-sign',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_ae8eab7f33db4509bdfde0e91484f5fe.setIcon(icon_c78882f7f878497388f45c3cbf663e2d);
+            var circle_marker_eafea58f61f545ad8a293c70709cc032 = L.circleMarker(
+                [-26.189944444444443, 28.269444444444446],
+                {
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_16a52f9b3b244592bf7ad1f3d71bb7ce);
             
     
-            var popup_b82ef7a9daa54a65907ae1c4d65cd3a3 = L.popup({maxWidth: '100%'
+            var popup_cd539e402ddc49d19c6c777a5e10f38b = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_3d69764038574a0d84dd63bc780bcad2 = $(`<div id="html_3d69764038574a0d84dd63bc780bcad2" style="width: 100.0%; height: 100.0%;">This is the starting point</div>`)[0];
-                popup_b82ef7a9daa54a65907ae1c4d65cd3a3.setContent(html_3d69764038574a0d84dd63bc780bcad2);
+                var html_ceb3e4ecaec541e2b2d5535b83ab3334 = $(`<div id="html_ceb3e4ecaec541e2b2d5535b83ab3334" style="width: 100.0%; height: 100.0%;">Unilever SA</div>`)[0];
+                popup_cd539e402ddc49d19c6c777a5e10f38b.setContent(html_ceb3e4ecaec541e2b2d5535b83ab3334);
             
 
-            marker_ae8eab7f33db4509bdfde0e91484f5fe.bindPopup(popup_b82ef7a9daa54a65907ae1c4d65cd3a3)
+            circle_marker_eafea58f61f545ad8a293c70709cc032.bindPopup(popup_cd539e402ddc49d19c6c777a5e10f38b)
             ;
 
             
